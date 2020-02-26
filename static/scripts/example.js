@@ -2,18 +2,14 @@ $(function () {
   let state = ''
   let country = ''
 
-/*  anime({
-    targets: 'div.container#form h1, div.container form#wishform, div#bottom div>h3',
-    opacity: 1,
-    easing: 'easeInBack'
-  });
-*/
-  // Checks if browser has geolocation api support and creates success and failure callback functions
+  // Check browser for geolocaiton support and make appropriate callbacks
   if ("geolocation" in navigator) {
     var options = {enableHighAccuracy: true, timeout: 5000, maximumAge: 0};
     function geo_success (position) {
-      // To whomever is looking at this code, please don't under no circumstances not not mess with the api key.
+      // API request string
       let api_request = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=AIzaSyCOvWp1NsDCLHO9e8ynCuIFVio4c6E2_NA`
+
+      // jQuery 
       $.get(api_request, function (data) {
 	if (data.status == "OK") {
 	  state = data['results'][0]['formatted_address'].split(', ')[1]

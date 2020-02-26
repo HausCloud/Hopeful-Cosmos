@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Contains Wish class
+Wish sqlalchemy object
 """
 
 from datetime import datetime
@@ -11,7 +11,6 @@ from storage import storage_instance
 
 time = "%Y-%m-%d|%H:%M:%S"
 Base = declarative_base()
-
 
 class Wish(Base):
     """
@@ -44,14 +43,14 @@ class Wish(Base):
 
     def save(self):
         """
-        Saves Wish object to database using Storage class
+        Use storage engine to save self instance
         """
         storage_instance.new(self)
         storage_instance.save()
 
     def to_dict(self):
         """
-        Return dictionary representation of Wish object
+        Return dictionary representation
         """
         dict_copy = self.__dict__.copy()
         if '_sa_instance_state' in dict_copy:

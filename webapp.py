@@ -1,25 +1,20 @@
-"""
-Flask web framework / application to serve static content
-"""
-
 import basewish
 import storage
 import uuid
 from flask import Flask, render_template, url_for, jsonify, request, abort
 from flask_cors import CORS
-# from werkzeug.exceptions import HTTPException, default_exceptions
 
-# Create flask instance called app and apply CORS to said instance
+# Create flask instance and apply CORS
 app = Flask(__name__)
 CORS(app)
+
 # Disable strict slashes for all routes
 app.url_map.strict_slashes = False
-
 
 @app.route('/')
 def main_page():
     """
-    Route that serves main page
+    Serve main page
     """
     return render_template('example.html', cache_id=uuid.uuid4())
 
@@ -27,7 +22,7 @@ def main_page():
 @app.route('/api/wish/all', methods=['GET'])
 def all_wish():
     """
-    Route to return json dictionary of 50 wishes from database
+    GET route to return JSON of 50 wishes
     """
     my_dict = {}
     wish_list = storage.storage_instance.grab_all()
@@ -35,13 +30,14 @@ def all_wish():
         my_dict['{}'.format(wish.wish_id)] = wish.to_dict()
     return jsonify(my_dict)
 
-
 @app.route('/api/wish/make', methods=['POST'])
 def create_wish():
     """
-    Route to create a new wish and save in database
+    POST route to save a wish
     """
     req = request.json
+
+    # Ensure request contains all necessary informtion to create a wish object
     if req is None:
         abort(400, 'Not JSON')
     elif type(req) is not dict:
@@ -74,7 +70,7 @@ def teardown_db(exception):
 @app.errorhandler(404)
 def not_found_error(error):
     """
-    Error handler in the case of page not found
+    404 gif page
     """
     return render_template('404.html', cache_id=uuid.uuid4())
 
@@ -82,17 +78,17 @@ def not_found_error(error):
 @app.errorhandler(500)
 def internal_error(error):
     """
-    Error handler in the case code isn't working somewhere
+    Broad 500 error code handler
     """
-    abort(500, 'Whoops! Something happened with the code')
+    abort(500, 'Whoops, something went wrong')
 
 
 @app.errorhandler(502)
 def bad_gateway(error):
     """
-    Error handler for .. something..
+    Bad gateway error 
     """
-    abort(502, 'bad gateway.. but why?..')
+    abort(502, 'Bad Gateway')
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0')
