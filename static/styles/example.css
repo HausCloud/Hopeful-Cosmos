@@ -8,38 +8,65 @@ html, body {
 }
 
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
 }
 
 div.container#universe {
     position: relative;
     min-height: 60%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 60%;
     flex: 1 1 60%;
     text-align: center;
     background: #000000;
 }
 
 div.container#form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     background: #1F2623;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40%;
     flex: 1 1 40%;
 }
 
 div.container form#wishform {
-/*    opacity: 0; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     border-radius: 1rem;
     width: 60%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#A6A6A8), to(#848487));
+    background: -o-linear-gradient(top, #A6A6A8, #848487);
     background: linear-gradient(to bottom, #A6A6A8, #848487);
-    /* box-shadow: 0 1px 1.5rem rgba(255,255,255,0.3); */
 }
 
 div.container form#wishform label {
@@ -54,15 +81,23 @@ div.container form#wishform input {
 }
 
 div.container#form  h1 {
-/*    opacity: 0; */
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
     flex: 0 1 auto;
     color: #FFFFFF;
     font-family: "Amatic SC", "Arial", sans-serif;
 }
 
 div#form .fieldcontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -75,10 +110,21 @@ div.container#form form#wishform div.fieldcontainer#statefieldcontainer, div.con
 }
 
 div#bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
     flex: 0 1 auto;
     width: 100%;
     color: white;
@@ -86,33 +132,50 @@ div#bottom {
 }
 
 div#bottom div>h3 {
-  /*  opacity: 0; */
+    /*  opacity: 0; */
 }
 
 #iconNbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flow-flow: row nowrap;
 }
 
 #textbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
 }
 
 body div.container div.container#cardcontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
     position: absolute;
     overflow: scroll;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
     padding: 1%;
     z-index: 2;
+    -webkit-box-shadow: 0 4px 8px 0 rgb(244, 239, 103);
     box-shadow: 0 4px 8px 0 rgb(244, 239, 103);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     border-radius: 5px;
     background-color: aliceblue;
@@ -120,8 +183,14 @@ body div.container div.container#cardcontainer {
 }
 
 div.container#universe div.container#cardcontainer div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
@@ -134,8 +203,25 @@ div.container#cardcontainer div h2,  div.container#cardcontainer div p {
 }
 
 .starcontainer:hover>.star {
+    -webkit-box-shadow:
+    0 0 20px 10px #fff,  /* inner white */
+    0 0 30px 15px #f0f, /* middle magenta */
+    0 0 40px 20px #0ff;
     box-shadow:
     0 0 20px 10px #fff,  /* inner white */
     0 0 30px 15px #f0f, /* middle magenta */
     0 0 40px 20px #0ff; /* outer cyan */
+}.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
 }

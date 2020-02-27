@@ -19,8 +19,6 @@
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/example.css') }}?{{ cache_id}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/button.css') }}?{{ cache_id}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/menu.css') }}?{{ cache_id}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/startwink.css') }}?{{ cache_id}}">
 
     <!-- **********************
 	 Import Google Fonts Amatic SC and Josefin Sans
@@ -30,22 +28,12 @@
 
 
     <!-- **********************
-         Import JQuery and form validation plugin
+	 JS, JQuery, FontAwesome
 	 ********************** -->
     <script defer src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
-
-    <!-- **********************
-         Render Javascript from static folder
-	 ********************** -->
-    <script defer src="static/scripts/example.js?{{ cache_id }}"></script>
-    <script defer src="static/scripts/menu-wheel.js?{{ cache_id }}"></script>
-<!--    <script defer src="static/scripts/anime.min.js"></script> -->
-
-    <!-- **********************
-	 Import fontawesome webkit
-	 ********************** -->
+    <script defer src="{{ url_for('static', filename='scripts/example.js') }}?{{ cache_id}}"></script>
     <script defer src="https://kit.fontawesome.com/2bf2f2b87d.js" crossorigin="anonymous"></script>
   </head>
 
