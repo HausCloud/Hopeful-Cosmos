@@ -36,4 +36,4 @@ Mohameth Seck - [github](https://choosealicense.com/licenses/mit/)
 Ty Edge - [github](https://github.com/tyedge)
 
 # Licensing 📜
-This project is licensed under the MIT License - see the [LICENSE]https://github.com/HausCloud/Hopeful-Cosmos/blob/development/LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/HausCloud/Hopeful-Cosmos/blob/development/LICENSE.md) file for details.
