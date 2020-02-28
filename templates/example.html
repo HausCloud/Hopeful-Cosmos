@@ -10,7 +10,7 @@
     <meta name="description" content="A universe of hope where you can see what the world is wishing for or make your own wish">
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icon.ico') }}?{{ cache_id }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/star.png') }}?{{ cache_id }}">
 
     <!-- **********************
          Render CSS
@@ -30,11 +30,11 @@
     <!-- **********************
 	 JS, JQuery, FontAwesome
 	 ********************** -->
-    <script defer src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
     <script defer src="{{ url_for('static', filename='scripts/example.js') }}?{{ cache_id}}"></script>
     <script defer src="https://kit.fontawesome.com/2bf2f2b87d.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.2/gsap.min.js"></script>
   </head>
 
   <body>

@@ -7,6 +7,9 @@ $(function() {
     maximumAge: 0
   };
 
+  gsap.to('#form h1:first-child', {duration: 1, opacity: 1});
+  gsap.to('#bottom > div', {duration: 2, opacity: 1});
+
   // Callback to retrieve location
   function geo_success(position) {
     // API request string
@@ -77,10 +80,13 @@ $(function() {
           "height": `${num}`,
           "width": `${num}`,
           "border-radius": "50%",
-          "z-index": "0"
+          "z-index": "0",
+	  "opacity": "0"
         })
         idx++
       }
+
+      gsap.to('.star', {duration: .4, opacity: 1, stagger: .25});
 
       // Bind click event to display card
       $('div.container#universe .starcontainer').click(function() {
