@@ -17,7 +17,7 @@ body {
     flex-flow: column nowrap;
 }
 
-div.container#universe {
+#universe {
     position: relative;
     min-height: 60%;
     -webkit-box-flex: 1;
@@ -27,7 +27,7 @@ div.container#universe {
     background: #000000;
 }
 
-div.container#form {
+#form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -46,7 +46,7 @@ div.container#form {
     flex: 1 1 40%;
 }
 
-div.container form#wishform {
+#wishform {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -69,7 +69,7 @@ div.container form#wishform {
     background: linear-gradient(to bottom, #A6A6A8, #848487);
 }
 
-div.container form#wishform label {
+#wishform label {
     color: #FFFFFF;
     font-family: "Josefin Slab";
 }
@@ -109,7 +109,7 @@ div.container#form form#wishform div.fieldcontainer#statefieldcontainer, div.con
     margin-right: .5rem;
 }
 
-div#bottom {
+#bottom {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -131,8 +131,9 @@ div#bottom {
     font-family: "Amatic SC", "Arial", sans-serif;
 }
 
-div#bottom div>h3 {
-    /*  opacity: 0; */
+#bottom div h3  a {
+    color: inherit;
+    text-decoration: none;
 }
 
 #iconNbox {
