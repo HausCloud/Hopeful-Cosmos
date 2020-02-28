@@ -2,7 +2,7 @@
 
 # Introduction 💡
 
-Hopeful Cosmos is a web application to view the wishes from people all over the world.
+Hopeful Cosmos is a web application to instill hope in the people of the world. Get insight into the hopes of dreams of others or better yet, make a wish yourself!
 
 Card format detailed below:
 - Name of the star
